@@ -23,7 +23,7 @@ export default function VideoSection() {
     if (stickyMask.current && container.current) {
       requestAnimationFrame(animate);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getScrollProgress = () => {
@@ -40,16 +40,16 @@ export default function VideoSection() {
   };
 
   return (
-    <main className="mt-[40vh] lg:my-[10vh]">
+    <main className="lg:my-[10vh]">
       <div ref={container} className="relative h-[200vh]">
         <div
           ref={stickyMask}
-          className="flex flex-row justify-center items-center overflow-hidden sticky top-0 h-screen"
+          className="flex flex-row justify-center items-start lg:items-center overflow-hidden sticky top-0 h-screen"
           style={{
             maskImage: "url(/logo.svg)",
             maskPosition: "center",
             maskRepeat: "no-repeat",
-           }}
+          }}
         >
           <video className="w-full h-full object-cover" autoPlay muted loop>
             <source src="/video.mp4" type="video/mp4" />
