@@ -7,7 +7,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     const fullTexts = [
-      "Süreç Geliştirme Uzmanı",
+      "Süreç Geliştirme Uzmanı Adayı",
       "Freelance İçerik Editörü",
       "Freelance İçerik Yazarı"
     ];
