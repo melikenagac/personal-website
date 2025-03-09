@@ -91,7 +91,7 @@ const HeroSection = () => {
           </motion.p>
         </motion.div>
       </div>
-      {/* Aşağı kaydırma butonu kaldırıldı */}
+      { }
     </div>
   );
 };

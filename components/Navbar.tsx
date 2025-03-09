@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -25,7 +26,11 @@ export default function Navbar() {
       className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-sm"
     >
       <div className="max-w-7xl h-24 mx-auto px-4 sm:px-6 lg:px-8 flex flex-row justify-between items-center">
-        <Image src="/logo.svg" alt="Melike Nağaç Logo" width={150} height={50} />
+        <Link href="/" legacyBehavior>
+          <a aria-label="Anasayfa">
+            <Image src="/logo.svg" alt="Melike Nağaç Logo" width={150} height={50} />
+          </a>
+        </Link>
         <div className="flex justify-end items-center h-20">
           <div className="md:hidden">
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-700 focus:outline-none mr-4">

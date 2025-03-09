@@ -12,7 +12,7 @@ const GeometricShapes = () => (
     >
       {/* SVG içeriği buraya gelecek */}
       <circle cx="187.5" cy="187.5" r="150" fill="#e0e0e0" />
-      {/* Örnek bir daire ekledim, kendi SVG içeriğinizi buraya yerleştirin */}
+      {/* Örnek bir daire */}
     </svg>
     <motion.div
       className="text-[2.5rem] md:text-[3rem] text-blue-800 font-light italic relative z-10"
@@ -88,7 +88,7 @@ export default function AboutSection() {
             </p>
 
             <p>
-              2016 yılından beri kişisel blog yazarlığı yaparak dijital dünyada izler
+              2018 yılından beri kişisel blog yazarlığı yaparak dijital dünyada izler
               bırakıyor; markalara freelance içerik editörlüğü ve yazarlığı hizmeti
               sunuyorum. Aynı zamanda kurucu üyelerinden olduğum IYCADA Gençlik
               Derneği&apos;nde denetim kurulu başkanı olarak sosyal projelere katkı

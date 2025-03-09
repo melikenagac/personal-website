@@ -16,15 +16,15 @@ const BlogDetailPage = () => {
 	useEffect(() => {
 		const fetchBlog = async () => {
 			blogServices.getContent(params?.id as string)
-			.then((res) => {
-				setBlog(res.data);
-				setIsLoading(false);
-			})
-			.catch(() => {
-				toast.error('Blog verileri alınırken hata oluştu. Lütfen daha sonra tekrar deneyin.');
-				setBlog(undefined);
-				setIsLoading(false);
-			})
+				.then((res) => {
+					setBlog(res.data);
+					setIsLoading(false);
+				})
+				.catch(() => {
+					toast.error('Blog verileri alınırken hata oluştu. Lütfen daha sonra tekrar deneyin.');
+					setBlog(undefined);
+					setIsLoading(false);
+				})
 		};
 		fetchBlog();
 	}, [params?.id]);
@@ -61,7 +61,9 @@ const BlogDetailPage = () => {
 				publishedDate={blog?.date as string}
 				contentLength={blog?.content.rendered.length as number}
 			/>
-			<div className="m-8 lg:m-32" dangerouslySetInnerHTML={{ __html: blog?.content.rendered as string | TrustedHTML }} />
+			<article className="prose lg:prose-xl m-8 lg:m-32">
+				<div dangerouslySetInnerHTML={{ __html: blog?.content.rendered as string | TrustedHTML }} />
+			</article>
 		</div>
 	);
 };
